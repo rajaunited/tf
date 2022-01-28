@@ -1,4 +1,4 @@
-name: Heroku Dyno Switcher (1st)
+name: Main
 on:
   schedule:
   - cron: "* * * * *"
