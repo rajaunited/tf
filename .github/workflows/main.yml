@@ -14,4 +14,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Running
       run: |
-        echo "Running!"
+        echo "${HELLO}"
