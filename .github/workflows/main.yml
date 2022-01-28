@@ -1,15 +1,13 @@
-name: main
+name: Heroku Dyno Switcher (1st)
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '* * * * *'
+  - cron: "* * * * *"
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Running
       run: |
         echo "Running!"
