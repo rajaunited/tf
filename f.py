@@ -11,6 +11,8 @@ with Client("AQCV4qDYBrczVFi7PNuuWntoXInA6b9-7HIWSQpR0Mio6Bce7ZGYx4lPnYGkQVUs8eP
             message.copy(-1001655189003)
             print("forwarded f"{message.message_id}"")
             sleep(1)
-        except FloodWait as e:
-            sleep(e.x)
-            pass
+        except Exception as e
+            print(e)
+        except FloodWait as er:
+            sleep(er.x)
+            continue
