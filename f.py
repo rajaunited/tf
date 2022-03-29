@@ -9,7 +9,7 @@ with Client("AQCV4qDYBrczVFi7PNuuWntoXInA6b9-7HIWSQpR0Mio6Bce7ZGYx4lPnYGkQVUs8eP
     for message in app.iter_history(-1001673241127, reverse=True):
         try:
             message.copy(-1001655189003)
-            print("forwarded f"{message.message_id}"")
+            print("forwarded f'{message.message_id}'")
             sleep(1)
         except Exception as e
             print(e)
