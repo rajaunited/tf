@@ -42,6 +42,21 @@ def update_account(client, url, shared_drive_id, folder_id):
     }
     client.post(f'https://{urlparse(url).netloc}/account', data=data)
 
+def gen_payload(data, boundary=f'{"-"*6}_'):
+    data_string = ''
+    for item in data:
+        data_string += f'{boundary}\r\n'
+        data_string += f'Content-Disposition: form-data; name="{item}"\r\n\r\n{data[item]}\r\n'
+    data_string += f'{boundary}--\r\n'
+    return data_string
+
+def parse_info(data):
+    info = re.findall('>(.*?)<\/li>', data)
+    info_parsed = {}
+    for item in info:
+        kv = [s.strip() for s in item.split(':', maxsplit = 1)]
+        info_parsed[kv[0].lower()] = kv[1]
+    return info_parsed
 
 # ===================================================================
 
