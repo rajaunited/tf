@@ -3,7 +3,7 @@ import requests
 from lxml import etree
 from urllib.parse import urlparse
 
-url = "https://driveapp.in/file/l6Cf4uJDWl" # file url
+url = "https://driveapp.in/file/VS0HRJwwGG" # file url
 
 # Website User Account (NOT GOOGLE ACCOUNT) ----
 account = {
