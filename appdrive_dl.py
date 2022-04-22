@@ -7,8 +7,8 @@ url = "https://driveapp.in/file/b0f58cd0a45b330459aa" # file url
 
 # Website User Account (NOT GOOGLE ACCOUNT) ----
 account = {
-    'email': 'ahadshaikh1337@gmail.com', 
-    'passwd': '@ahad1675'
+    'email': '', 
+    'passwd': ''
 }
 
 # Destination config ----
