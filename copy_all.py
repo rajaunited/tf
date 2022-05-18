@@ -1,7 +1,7 @@
 from time import sleep
 from pyrogram import Client
 from pyrogram.errors import FloodWait
-from logging import error as log
+from logging import log, error
 
 APP_ID = 11542235
 API_HASH = "e46bdcd08e7818b6ecc0448446dc7fc3"
@@ -14,8 +14,8 @@ with Client(SESSION, api_id=APP_ID, api_hash=API_HASH) as app:
             log(f"Sussesfuly Copied Message Id: {message.message_id}")
             sleep(4)
         except Exception as e:
-            log(e)
+            error(e)
         except FloodWait as er:
-            log(er)
+            error(er)
             sleep(er.value)
             continue
