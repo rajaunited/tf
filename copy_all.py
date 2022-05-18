@@ -1,7 +1,7 @@
+from time import sleep
 from pyrogram import Client
 from pyrogram.errors import FloodWait
 from logging import error as logerror
-from time import sleep
 
 APP_ID = 11542235
 API_HASH = "e46bdcd08e7818b6ecc0448446dc7fc3"
