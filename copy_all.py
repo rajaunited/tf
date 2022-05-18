@@ -13,9 +13,9 @@ with Client(SESSION, api_id=APP_ID, api_hash=API_HASH) as app:
             message.copy(-1001560716943)
             print(f"Sussesfuly Copied Message Id: {message.message_id}")
             sleep(4)
-        except Exception as e:
-            error(e)
         except FloodWait as er:
             error(er)
             sleep(er.x)
+        except Exception as e:
+            error(e)
             continue
