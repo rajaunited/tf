@@ -1,5 +1,6 @@
 from pyrogram import Client
 from pyrogram.errors import FloodWait
+from logging import error as logerror
 from time import sleep
 
 APP_ID = 11542235
@@ -12,7 +13,8 @@ with Client(SESSION, api_id=APP_ID, api_hash=API_HASH) as app:
             message.copy(-1001627190543)
             sleep(4)
         except Exception as e:
-            print(e)
+            logerror(e)
         except FloodWait as er:
+            logerror(er)
             sleep(er.value)
             continue
