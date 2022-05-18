@@ -17,5 +17,5 @@ with Client(SESSION, api_id=APP_ID, api_hash=API_HASH) as app:
             error(e)
         except FloodWait as er:
             error(er)
-            sleep(er.value)
+            sleep(er.x)
             continue
